@@ -1,0 +1,12 @@
+[
+  {
+    "type": "normal",
+    "date": "2026-02-01T00:00:00.000Z",
+    "processedDate": "2026-02-03T00:00:00.000Z",
+    "originalAmount": -120,
+    "originalCurrency": "ILS",
+    "chargedAmount": -120,
+    "description": "SUPER-PHARM סניף 42",
+    "status": "completed"
+  }
+]

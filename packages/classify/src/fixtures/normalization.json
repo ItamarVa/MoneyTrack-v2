@@ -1,0 +1,30 @@
+[
+  {
+    "input": "סופר פארם סניף 123 ת\"א",
+    "expected": "סופר פארם"
+  },
+  {
+    "input": "WOLT DELIVERY תל אביב",
+    "expected": "וולט"
+  },
+  {
+    "input": "מקדונלדס מסוף 456",
+    "expected": "מקדונלדס"
+  },
+  {
+    "input": "AMAZON 12345678",
+    "expected": "אמזון"
+  },
+  {
+    "input": "שופרסל   דיל   חיפה",
+    "expected": "שופרסל דיל"
+  },
+  {
+    "input": "NETFLIX #9912",
+    "expected": "נטפליקס"
+  },
+  {
+    "input": "SUPER-PHARM (ONLINE)",
+    "expected": "סופר פארם"
+  }
+]

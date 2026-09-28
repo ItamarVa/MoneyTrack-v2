@@ -1,0 +1,52 @@
+#include <tunables/global>
+
+# Based on the Home Assistant developer template (docs/apps/presentation.md).
+# Exec rules must cover every binary the image runs: s6-overlay v3 (/init,
+# /command, /package), nginx (/usr/sbin), Node copied to /usr/local/bin, and
+# Debian chromium (/usr/bin wrapper -> /usr/lib/chromium). A missing exec rule
+# stops the container on HA OS, where AppArmor is enforced.
+profile moneytrack flags=(attach_disconnected,mediate_deleted) {
+  #include <abstractions/base>
+
+  file,
+  network,
+  signal,
+  ptrace (read, readby),
+
+  # nginx master chowns its temp dirs and signals workers running as www-data.
+  capability chown,
+  capability dac_override,
+  capability fowner,
+  capability kill,
+  capability setgid,
+  capability setuid,
+
+  # S6-Overlay
+  /init ix,
+  /bin/** ix,
+  /usr/bin/** ix,
+  /run/{s6,s6-rc*,service}/** ix,
+  /package/** ix,
+  /command/** ix,
+  /etc/services.d/** rwix,
+  /etc/cont-init.d/** rwix,
+  /etc/cont-finish.d/** rwix,
+  /run/{,**} rwk,
+  /dev/tty rw,
+
+  # Bashio
+  /usr/lib/bashio/** ix,
+  /tmp/** rwk,
+
+  # MoneyTrack services
+  /usr/sbin/nginx ix,
+  /usr/local/bin/node ix,
+  /usr/lib/chromium/** ix,
+  /moneytrack/scripts/** ix,
+  /dev/shm/** rwk,
+  /data/** rwk,
+  /share/** rwk,
+
+  deny /etc/passwd w,
+  deny /etc/shadow w,
+}

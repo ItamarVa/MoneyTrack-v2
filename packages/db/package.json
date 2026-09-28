@@ -1,0 +1,31 @@
+{
+  "name": "@moneytrack/db",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "@moneytrack/contracts": "0.1.0",
+    "@moneytrack/vault": "0.1.0",
+    "better-sqlite3-multiple-ciphers": "13.0.3",
+    "better-sqlite3": "npm:better-sqlite3-multiple-ciphers@13.0.3",
+    "drizzle-orm": "0.45.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.13",
+    "drizzle-kit": "0.31.4",
+    "typescript": "5.8.2"
+  }
+}

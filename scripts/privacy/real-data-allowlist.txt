@@ -1,0 +1,44 @@
+# Real-data leak guard allowlist (scripts/privacy/check-real-data.mjs, MEM-PUB).
+# One SHA-256 of a normalized value per line; `#` starts a comment.
+# Never write the plaintext value here, not even in a comment.
+# Add only generic matches (brand names, bank boilerplate, seeded names), never
+# a payee, a person, or an account. Generate a line with:
+#   npm run privacy:check -- --hash "<exact text from the file>"
+
+1b7d92166fa79b60b6fc48d11b0b0d0cb0783c0ec052a428957a6cb193ebaa08  # seeded rule pattern, packages/db/drizzle/0002_seed_categories.sql
+d389a7051313e3dc8dc2552a29e64e4115f9effa6914a9b0a9d587a6212a0670  # seeded rule pattern
+21665ca201d4070f6fcc99b84aa1e55ae49e7b47069a24ed524da86413381b23  # seeded rule pattern
+3068f97c43202aa3a82f49078b274cd8f59316809e1af4c07f66243d3fcd7935  # seeded rule pattern
+89c773b29ffc8c5178ae50b551c1af8c0e17c7733a219f7515bf04cacba27147  # seeded rule pattern
+13666c77141c7e3af999f30516fb077ecadfbc8c21088f68d8f71520c19d2ad3  # seeded rule pattern
+b4070257b64eba070c81a0ddfc687bd44e398d144315957accc6dc613a1bb76f  # seeded rule pattern
+09688e64b2e071cba03b610620391a24b01e3eec54236b28ee7cd24055aa5f6a  # seeded rule pattern
+a4f2be0cd2080276f6cc396342ad496fac61f752e53b820cd84fd62ce0689516  # seeded rule pattern
+7f3fa48ca885678134842fa7456f3ece53a97f843b610185d900ac4e467c7490  # seeded rule pattern
+1a9e8f151fc0b0bdedb7876b566b87b8891da44b1a314dc258b7c622a1881688  # seeded rule pattern
+863d28a872d7cbf2b3d1954d513b6a08bca3b0c820bcbdb961d79a5e1f54a504  # seeded rule pattern
+44b3c5003d93c5f1623bf53e26dabe4253e8ab4a42311e37c337e89f8f891274  # seeded rule pattern
+0f4168490e38b8447e11ba4bd656aa11b925bd22af30bac464bc153fdb608501  # seeded rule pattern
+797e28ac60938fa45f22cfe4e16f16a0cfed6eb885a1100f8c39f8709811252a  # seeded rule pattern
+84a7f071a6bd0c82861b12c736407c6eb3c7ab4bc5b78bb83da76b0c56a0024f  # seeded rule pattern
+8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918  # seeded username, scripts/seed-admin.mts
+4194d1706ed1f408d5e02d672777019f4d5385c766a8c6ca8acba3167d36a7b9  # seeded person display name, scripts/seed-admin.mts
+0ef20fc188a14de7b3a8b2619f1dd715a9ce279400a7b87a51398d3e6c501d90  # manual institution code, packages/contracts/src/schema.ts
+3dc917ba41764835f2f7743846909bc390df5e341db55d8e378fc51ba618f7cb  # city name, packages/classify/src/normalize.ts
+ce8b890cd2f9230e9c9e820ce0a718059554c227b0d8ae7ad27238f36aa040c3  # pharmacy chain, packages/classify/src/normalize.ts
+0d77d1af2aa6b092532539c98fb01d5a790143dca1e8b1f6ea29e816aec8dff5  # standing-order label, packages/alerts/src/forecast.ts
+521268f5d3e329d97b1f736d2909469e04861d0a3e05af235aa13d44f96a2f3e  # public GitHub owner handle in repo URLs, ha-addon/**, repository.yaml
+ea288e5214669740aa467bfeaf57ee67fd2688ba4d4d7cdf6a24211e7b4ccbc3  # card-issuer settlement boilerplate, packages/engine/src/settlement.ts
+dfa87310bb2c47673ed34e42c1dfb3a76ecc2fae9789a40b72e7ef1238887511  # card-issuer settlement boilerplate
+d8b2e268f7022fdc240086bb0b77262c4f9d6048ea2cbdda33a46e109504fd4e  # card-issuer settlement boilerplate
+14a846ac7d029ffc23a83601d667ef8e609e5704af6872b39c4fdbc2e2ed395f  # card-issuer brand words, settlement.ts pattern
+53144882b4ce64ca29fe905dc36d9bcc6151d8700f9aa02143757cc2e63661ae  # card-issuer brand words
+5be4cb13cbe574b7e2d82b56c8d20118de1fbdba5b919304086e7fefa2e387d4  # card-issuer brand words
+46d0785d36027c72ab3d84d3a6bb0f8280b020aa580c0bf7cc7dabc561d739c8  # card-issuer settlement pattern literal, settlement.ts
+8913320d2c549979db8f79226d07081428a6da69bfd7c53e663a10d38c9b3c50  # card-issuer settlement pattern literal
+8e1e010a8fe4d428aba1d8f3a0ec550885e3d90a21b4cc3df550b5d4ee23c5f6  # card-issuer settlement pattern literal
+2c60ca4cb85768ae6fb31767ba4e3acd3e8ade6b14708a161d405525f3134a16  # securities trade bank boilerplate, packages/engine/src/savings.ts
+dff25925de61d097906a7f1a793788672759ec567375289abc97a7d42f3375e9  # securities trade bank boilerplate
+ff0e5efc43d3f154abc70a37c81fa2c10a5130d22b235ba85c38d30fb2b4addb  # fund-house name, savings.ts pattern literal
+fb56c75ffba48dfd1214a0dab756788ba5c25bf20a849b64c88faa7dc5622f37  # insurer transfer pattern literal, savings.ts
+e80c94b5c33d5bae9d572d3d2847007e3016d87ec7bcb0e2f2dfc11cf27f9666  # drawn-loan bank boilerplate, savings.ts pattern literal

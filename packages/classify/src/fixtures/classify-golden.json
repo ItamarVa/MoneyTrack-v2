@@ -1,0 +1,31 @@
+{
+  "rules": [
+    {
+      "pattern": "וולט",
+      "categoryName": "מסעדות",
+      "priority": 10
+    },
+    {
+      "pattern": "שופרסל",
+      "categoryName": "מזון",
+      "priority": 5
+    }
+  ],
+  "cases": [
+    {
+      "description": "WOLT DELIVERY תל אביב",
+      "expectedCategory": "מסעדות",
+      "expectedSource": "rule"
+    },
+    {
+      "description": "שופרסל דיל חיפה",
+      "expectedCategory": "מזון",
+      "expectedSource": "rule"
+    },
+    {
+      "description": "חנות לא מוכרת 9999",
+      "expectedCategory": "לא מסווג",
+      "expectedSource": "default"
+    }
+  ]
+}

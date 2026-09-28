@@ -1,0 +1,36 @@
+[
+  {
+    "type": "normal",
+    "identifier": 1001,
+    "date": "2026-01-15T00:00:00.000Z",
+    "processedDate": "2026-01-16T00:00:00.000Z",
+    "originalAmount": -89.9,
+    "originalCurrency": "ILS",
+    "chargedAmount": -89.9,
+    "description": "WOLT DELIVERY ת\"א",
+    "memo": "",
+    "status": "completed"
+  },
+  {
+    "type": "normal",
+    "date": "2026-02-01T00:00:00.000Z",
+    "processedDate": "2026-02-01T00:00:00.000Z",
+    "originalAmount": -120,
+    "originalCurrency": "ILS",
+    "chargedAmount": -120,
+    "description": "SUPER-PHARM סניף 42",
+    "status": "pending"
+  },
+  {
+    "type": "installments",
+    "identifier": 2002,
+    "date": "2026-02-10T00:00:00.000Z",
+    "processedDate": "2026-02-10T00:00:00.000Z",
+    "originalAmount": -250,
+    "originalCurrency": "ILS",
+    "chargedAmount": -250,
+    "description": "KSP ELECTRONICS",
+    "installments": { "number": 2, "total": 6 },
+    "status": "completed"
+  }
+]

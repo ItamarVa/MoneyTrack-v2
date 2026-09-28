@@ -1,0 +1,18 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/contracts" },
+    { "path": "packages/db" },
+    { "path": "packages/vault" },
+    { "path": "packages/egress" },
+    { "path": "packages/crypto" },
+    { "path": "packages/providers" },
+    { "path": "packages/engine" },
+    { "path": "packages/alerts" },
+    { "path": "packages/classify" },
+    { "path": "packages/ingest" },
+    { "path": "packages/market" },
+    { "path": "apps/agent" },
+    { "path": "apps/web" }
+  ]
+}

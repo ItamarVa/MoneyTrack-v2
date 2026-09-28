@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "composite": true
+  },
+  "include": ["src/**/*.ts", "src/fixtures/**/*.json"],
+  "references": [
+    { "path": "../contracts" },
+    { "path": "../db" },
+    { "path": "../alerts" },
+    { "path": "../classify" },
+    { "path": "../engine" },
+    { "path": "../providers" },
+    { "path": "../vault" }
+  ]
+}

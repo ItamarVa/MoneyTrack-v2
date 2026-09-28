@@ -1,0 +1,43 @@
+{
+  "name": "moneytrack",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @moneytrack/web",
+    "dev:agent": "npm run dev -w @moneytrack/agent",
+    "build": "tsc -b && npm run build -w @moneytrack/web",
+    "test": "vitest run",
+    "typecheck": "tsc -b",
+    "lint": "eslint . --max-warnings 0",
+    "memory:check": "node scripts/memory/check-drift.mjs",
+    "privacy:check": "node scripts/privacy/check-real-data.mjs",
+    "test:budget": "node scripts/benchmarks/run-budget-check.mjs",
+    "test:restore": "node scripts/backup-restore-drill.mjs",
+    "seed:admin": "tsx scripts/seed-admin.mts",
+    "reset:admin-password": "tsx scripts/reset-admin-password.mts",
+    "reset:and-resync": "tsx scripts/reset-and-resync.mts --clear --resync",
+    "reapply:salary-reporting": "tsx scripts/reapply-salary-reporting.mts"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.22.0",
+    "tsx": "4.19.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1",
+    "vitest": "4.1.11"
+  },
+  "dependencies": {
+    "next": "16.3.5"
+  },
+  "overrides": {
+    "vite": "8.3.0",
+    "rolldown": "1.2.8"
+  }
+}

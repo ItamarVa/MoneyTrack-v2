@@ -1,0 +1,40 @@
+{
+  "name": "@moneytrack/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3100",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 3100",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@fontsource-variable/frank-ruhl-libre": "5.2.5",
+    "@ibm/plex-sans-hebrew": "1.1.0",
+    "@moneytrack/alerts": "0.1.0",
+    "@moneytrack/classify": "0.1.0",
+    "@moneytrack/contracts": "0.1.0",
+    "@moneytrack/crypto": "0.1.0",
+    "@moneytrack/db": "0.1.0",
+    "@moneytrack/egress": "0.1.0",
+    "@moneytrack/engine": "0.1.0",
+    "@moneytrack/ingest": "0.1.0",
+    "@moneytrack/vault": "0.1.0",
+    "@node-rs/argon2": "2.0.2",
+    "@tanstack/react-table": "^9.1.0",
+    "@tanstack/react-virtual": "^3.14.0",
+    "drizzle-orm": "0.45.2",
+    "lucide-react": "1.37.0",
+    "next": "16.3.5",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "recharts": "3.10.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.4",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "tailwindcss": "4.1.4",
+    "typescript": "5.8.2"
+  }
+}

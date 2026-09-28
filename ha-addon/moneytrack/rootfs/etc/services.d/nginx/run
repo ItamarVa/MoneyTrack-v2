@@ -1,0 +1,3 @@
+#!/usr/bin/with-contenv bashio
+bashio::log.info "Starting ingress nginx on :8099"
+exec nginx -g "daemon off;"

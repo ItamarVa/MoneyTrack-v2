@@ -1,0 +1,12 @@
+{
+  "note": "Regression ceilings for run-budget-check.mjs at 50k transactions - not performance targets. Set around 3x the slowest figure observed on the owner's machine, because repeated runs there already vary by 2x and a CI runner is slower still. The gate is meant to catch an algorithmic regression, not a few hundred milliseconds. Aspirational targets live in memory/performance.md.",
+  "expectedRows": 50000,
+  "budgetsMs": {
+    "dashboardAggregate": 5000,
+    "breakdownByCategory": 6000,
+    "breakdownByMerchant": 6000,
+    "monthlySeries": 6000,
+    "rollupRebuild": 15000,
+    "mortgageAmortization3Tracks30y": 500
+  }
+}

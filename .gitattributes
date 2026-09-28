@@ -1,0 +1,4 @@
+# Add-on files run inside a Linux container; CRLF breaks shebangs and s6 run scripts.
+ha-addon/** text eol=lf
+# The store icon and logo: EOL conversion corrupts PNG bytes.
+ha-addon/**/*.png binary

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "GHSA-jmr9-qjv8-65gv",
+    "package": "extract-zip",
+    "reason": "No fixed extract-zip release. Pulled by israeli-bank-scrapers 6.9.0 -> puppeteer 24 -> @puppeteer/browsers 2.13.2 (exact pin); only used to unpack the Chrome build puppeteer downloads from Google's CDN at install time. The add-on skips the download and uses Debian chromium. @puppeteer/browsers 3.x drops extract-zip but is an ESM-only major that puppeteer 24 does not support. Clears when israeli-bank-scrapers moves to puppeteer 25.",
+    "reviewBy": "2026-12-26"
+  },
+  {
+    "id": "GHSA-7pqw-9j4j-h8q3",
+    "package": "extract-zip",
+    "reason": "Same dependency path and exposure as GHSA-jmr9-qjv8-65gv.",
+    "reviewBy": "2026-12-26"
+  }
+]
