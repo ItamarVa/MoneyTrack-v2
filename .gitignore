@@ -1,0 +1,38 @@
+﻿node_modules/
+dist/
+.next/
+.turbo/
+coverage/
+*.tsbuildinfo
+
+# Runtime data — never in repo
+data/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Puppeteer profiles
+puppeteer-profile*/
+
+# Logs
+*.log
+logs/
+
+# Leftover artifact of the deleted dataset generator; the budget check now builds
+# its own throwaway DB under the temp dir instead.
+scripts/benchmarks/synthetic-dataset.json
+
+# Declaration output that tsc drops beside the source it was built from
+apps/web/src/**/*.d.ts
+apps/web/src/**/*.d.ts.map
+
+# Knowledge graph output - regenerated from the code by scripts/graphify-update.py
+graphify-out/

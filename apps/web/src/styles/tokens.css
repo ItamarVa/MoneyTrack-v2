@@ -1,0 +1,98 @@
+/* MoneyTrack v2 design tokens — shared surface (coordinate ADR on change) */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --brand-navy-900: #0c2448;
+  --brand-navy-700: #1a3459;
+  --brand-blue-500: #06578e;
+  --brand-orange-500: #f27803;
+  --brand-orange-400: #fe9102;
+
+  --surface-bg: #f4f6f9;
+  --surface-card: #ffffff;
+  --surface-elevated: #ffffff;
+  --text-primary: var(--brand-navy-900);
+  --text-secondary: color-mix(in srgb, var(--brand-navy-700) 72%, transparent);
+  --text-muted: color-mix(in srgb, var(--brand-navy-700) 48%, transparent);
+  --border-subtle: color-mix(in srgb, var(--brand-navy-900) 10%, transparent);
+  --border-strong: color-mix(in srgb, var(--brand-navy-900) 18%, transparent);
+  --ring-focus: color-mix(in srgb, var(--brand-orange-500) 55%, white);
+  --shadow-soft: 0 18px 48px color-mix(in srgb, var(--brand-navy-900) 12%, transparent);
+
+  --money-income: #15803d;
+  --money-expense: #b91c1c;
+  --chart-surplus: #16a34a;
+  --chart-deficit: #dc2626;
+
+  --font-display: "Frank Ruhl Libre", "Times New Roman", serif;
+  --font-body: "IBM Plex Sans Hebrew", system-ui, sans-serif;
+  --default-font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+.dark {
+  --brand-blue-500: #5eb8f0;
+  --brand-orange-500: #ff9f43;
+  --brand-orange-400: #ffb86b;
+
+  --surface-bg: #071428;
+  --surface-card: #0f2342;
+  --surface-elevated: #132b4f;
+  --text-primary: #eef3fa;
+  --text-secondary: color-mix(in srgb, #eef3fa 72%, transparent);
+  --text-muted: color-mix(in srgb, #eef3fa 48%, transparent);
+  --border-subtle: color-mix(in srgb, #eef3fa 10%, transparent);
+  --border-strong: color-mix(in srgb, #eef3fa 18%, transparent);
+  --ring-focus: color-mix(in srgb, var(--brand-orange-400) 70%, white);
+  --shadow-soft: 0 18px 48px color-mix(in srgb, black 45%, transparent);
+
+  --money-income: #4ade80;
+  --money-expense: #f87171;
+  --chart-surplus: #4ade80;
+  --chart-deficit: #f87171;
+}
+
+@theme inline {
+  --color-brand-navy-900: var(--brand-navy-900);
+  --color-brand-navy-700: var(--brand-navy-700);
+  --color-brand-blue-500: var(--brand-blue-500);
+  --color-brand-orange-500: var(--brand-orange-500);
+  --color-brand-orange-400: var(--brand-orange-400);
+
+  --color-surface-bg: var(--surface-bg);
+  --color-surface-card: var(--surface-card);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-strong: var(--border-strong);
+  --color-money-income: var(--money-income);
+  --color-money-expense: var(--money-expense);
+  --color-chart-surplus: var(--chart-surplus);
+  --color-chart-deficit: var(--chart-deficit);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
+
+  --radius-card: 1rem;
+  --radius-pill: 9999px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .donut-balance-glow {
+    animation: donut-balance-pulse 2.8s ease-in-out infinite;
+  }
+}
+
+@keyframes donut-balance-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.72;
+  }
+}

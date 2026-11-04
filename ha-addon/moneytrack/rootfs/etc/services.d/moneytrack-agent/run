@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bashio
+bashio::log.info "Starting MoneyTrack agent"
+
+export MONEYTRACK_MODE=ha-addon
+export MONEYTRACK_DATA_DIR=/data
+export MONEYTRACK_VAULT=file
+export PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+export NODE_ENV=production
+
+cd /moneytrack/agent || exit 1
+exec node dist/index.js

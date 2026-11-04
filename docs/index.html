@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MoneyTrack — צפייה מוצפנת</title>
+  <style>
+    :root {
+      --bg: #0c1110;
+      --surface: #141c1a;
+      --text: #eef4f2;
+      --muted: #8aa39c;
+      --accent: #3ecfae;
+      --danger: #f87171;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 1.35rem; margin-bottom: 0.25rem; }
+    p { color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
+    .card {
+      background: var(--surface);
+      border: 1px solid rgba(138,163,156,0.2);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 0.35rem; }
+    input {
+      width: 100%;
+      padding: 0.65rem 0.75rem;
+      border-radius: 10px;
+      border: 1px solid rgba(138,163,156,0.25);
+      background: #1a2421;
+      color: var(--text);
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.65rem 1.25rem;
+      border: none;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #0c1110;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .err { color: var(--danger); font-size: 0.85rem; margin-top: 0.75rem; }
+    .kpi { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem; }
+    .kpi div { background: #1a2421; padding: 1rem; border-radius: 12px; }
+    .kpi span { font-size: 0.75rem; color: var(--muted); }
+    .kpi strong { display: block; font-family: Consolas, monospace; font-size: 1.25rem; margin-top: 0.25rem; direction: ltr; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.85rem; }
+    th, td { padding: 0.5rem; border-bottom: 1px solid rgba(138,163,156,0.15); text-align: right; }
+    th { color: var(--muted); font-weight: 500; }
+    td.amount { direction: ltr; font-family: Consolas, monospace; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>MoneyTrack</h1>
+    <p>צפייה בצילום מוצפן כשהמחשב הביתי כבוי. סיסמת הריענון לא נשמרת בדף.</p>
+    <div class="card">
+      <label for="pw">סיסמת ריענון</label>
+      <input id="pw" type="password" autocomplete="off" />
+      <button type="button" id="open">פתח צילום</button>
+      <p id="err" class="err" hidden></p>
+    </div>
+    <div id="out" class="card" hidden></div>
+  </div>
+  <script>
+    const SNAPSHOT_URL = "../data/snapshot.enc.json";
+
+    async function deriveKey(password, saltBytes) {
+      const enc = new TextEncoder();
+      const baseKey = await crypto.subtle.importKey(
+        "raw",
+        enc.encode(password),
+        "PBKDF2",
+        false,
+        ["deriveBits"]
+      );
+      const bits = await crypto.subtle.deriveBits(
+        { name: "PBKDF2", salt: saltBytes, iterations: 120000, hash: "SHA-256" },
+        baseKey,
+        256
+      );
+      return crypto.subtle.importKey("raw", bits, "AES-GCM", false, ["decrypt"]);
+    }
+
+    function hexToBytes(hex) {
+      const out = new Uint8Array(hex.length / 2);
+      for (let i = 0; i < out.length; i++) out[i] = parseInt(hex.substr(i * 2, 2), 16);
+      return out;
+    }
+
+    async function decryptSnapshot(enc, password) {
+      const salt = hexToBytes(enc.salt);
+      const iv = hexToBytes(enc.iv);
+      const tag = hexToBytes(enc.tag);
+      const data = Uint8Array.from(atob(enc.data), (c) => c.charCodeAt(0));
+      const combined = new Uint8Array(data.length + tag.length);
+      combined.set(data);
+      combined.set(tag, data.length);
+      const key = await deriveKey(password, salt);
+      const plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv }, key, combined);
+      return JSON.parse(new TextDecoder().decode(plain));
+    }
+
+    function formatIls(n) {
+      return new Intl.NumberFormat("he-IL", { style: "currency", currency: "ILS" }).format(n);
+    }
+
+    function render(data) {
+      const out = document.getElementById("out");
+      out.hidden = false;
+      const k = data.kpis || {};
+      let rows = (data.recentTransactions || [])
+        .slice(0, 15)
+        .map((t) => `<tr><td>${t.description}</td><td class="amount">${formatIls(t.amount)}</td></tr>`)
+        .join("");
+      out.innerHTML = `
+        <p style="color:var(--muted);font-size:0.8rem">עודכן: ${data.generatedAt || ""}</p>
+        <div class="kpi">
+          <div><span>הוצאות החודש</span><strong>${formatIls(-(k.monthSpend || 0))}</strong></div>
+          <div><span>הכנסות החודש</span><strong>${formatIls(k.monthIncome || 0)}</strong></div>
+        </div>
+        <table><thead><tr><th>תיאור</th><th>סכום</th></tr></thead><tbody>${rows}</tbody></table>
+      `;
+    }
+
+    document.getElementById("open").addEventListener("click", async () => {
+      const err = document.getElementById("err");
+      err.hidden = true;
+      const pw = document.getElementById("pw").value;
+      if (!pw) {
+        err.textContent = "נא להזין סיסמה";
+        err.hidden = false;
+        return;
+      }
+      try {
+        const res = await fetch(SNAPSHOT_URL);
+        if (!res.ok) throw new Error("snapshot not found");
+        const enc = await res.json();
+        const data = await decryptSnapshot(enc, pw);
+        render(data);
+        document.getElementById("pw").value = "";
+      } catch (e) {
+        err.textContent = "לא ניתן לפתוח — סיסמה שגויה או שאין צילום";
+        err.hidden = false;
+      }
+    });
+  </script>
+</body>
+</html>

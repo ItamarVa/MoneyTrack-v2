@@ -1,0 +1,28 @@
+#!/usr/bin/with-contenv bashio
+bashio::log.info "Starting MoneyTrack web on 127.0.0.1:3100"
+
+export MONEYTRACK_MODE=ha-addon
+export MONEYTRACK_DATA_DIR=/data
+export MONEYTRACK_BIND_HOST=127.0.0.1
+export MONEYTRACK_HA_SHARE_DIR=/share
+export MONEYTRACK_VAULT=file
+export NODE_ENV=production
+export HOSTNAME=127.0.0.1
+export PORT=3100
+
+if [[ -f /data/options.json ]]; then
+  export MONEYTRACK_ALLOWED_USERS="$(
+    node -e "const o=JSON.parse(require('fs').readFileSync('/data/options.json','utf8')); process.stdout.write(JSON.stringify(o.allowed_users??[]))"
+  )"
+  if node -e "const o=JSON.parse(require('fs').readFileSync('/data/options.json','utf8')); process.exit(o.clear_lockouts?0:1)"; then
+    export MONEYTRACK_CLEAR_LOCKOUTS=1
+  fi
+fi
+
+if [[ -f /run/moneytrack/base-path.env ]]; then
+  # shellcheck source=/dev/null
+  source /run/moneytrack/base-path.env
+fi
+
+cd /moneytrack/web || exit 1
+exec node apps/web/server.js

@@ -1,0 +1,20 @@
+{
+  "month": [
+    {
+      "date": [
+        {
+          "year": 2026,
+          "month": 6,
+          "percentYear": 1.4,
+          "currBase": { "value": 104.5, "baseDesc": "2024 average" }
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "percentYear": 1.5,
+          "currBase": { "value": 105.1, "baseDesc": "2024 average" }
+        }
+      ]
+    }
+  ]
+}
