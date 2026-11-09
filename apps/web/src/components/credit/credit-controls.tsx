@@ -1,0 +1,145 @@
+/**
+ * The two controls that scope the whole credit page: the month-basis toggle and the card chips.
+ * Both are plain button groups with 44px targets; the chip row wraps instead of scrolling
+ * sideways so nothing hides off-screen at 375px.
+ */
+import type { DateBasis } from "@moneytrack/contracts";
+import he from "@/locales/he.json";
+import { cardLabel } from "./credit-utils";
+
+const basisCopy = he.creditPage.basis;
+const cardsCopy = he.creditPage.cards;
+
+const BASIS_OPTIONS: { value: DateBasis; label: string; hint: string }[] = [
+  { value: "charge", label: basisCopy.charge, hint: basisCopy.chargeHint },
+  { value: "transaction", label: basisCopy.purchase, hint: basisCopy.purchaseHint },
+];
+
+function segmentClass(active: boolean): string {
+  return [
+    "min-h-11 flex-1 rounded-lg px-3 text-sm font-medium transition-colors",
+    active
+      ? "bg-brand-blue-500/15 text-brand-blue-500 ring-1 ring-inset ring-brand-blue-500"
+      : "text-text-secondary hover:bg-surface-elevated hover:text-text-primary",
+  ].join(" ");
+}
+
+export function CreditBasisToggle({
+  value,
+  onChange,
+}: {
+  value: DateBasis;
+  onChange: (next: DateBasis) => void;
+}) {
+  const active = BASIS_OPTIONS.find((option) => option.value === value) ?? BASIS_OPTIONS[0]!;
+  return (
+    <div>
+      <div
+        role="group"
+        aria-label={basisCopy.label}
+        className="flex gap-1 rounded-xl border border-border-subtle bg-surface-card p-1"
+      >
+        {BASIS_OPTIONS.map((option) => (
+          <button
+            key={option.value}
+            type="button"
+            aria-pressed={option.value === value}
+            onClick={() => onChange(option.value)}
+            className={segmentClass(option.value === value)}
+          >
+            {option.label}
+          </button>
+        ))}
+      </div>
+      <p className="mt-1.5 px-1 text-xs text-text-muted">{active.hint}</p>
+    </div>
+  );
+}
+
+export type CardChipOption = { id: string; institutionCode: string; numberLast4: string | null };
+
+function chipClass(active: boolean): string {
+  return [
+    "inline-flex min-h-11 items-center rounded-full border px-4 text-sm font-medium transition-colors",
+    active
+      ? "border-brand-blue-500 bg-brand-blue-500/15 text-brand-blue-500"
+      : "border-border-strong bg-surface-card text-text-secondary hover:text-text-primary",
+  ].join(" ");
+}
+
+type ChipRowProps = {
+  label: string;
+  allLabel: string;
+  options: { id: string; label: string }[];
+  selectedId: string | null;
+  onSelect: (id: string | null) => void;
+};
+
+/** "All" chip plus one chip per option; null selection means no filter. */
+function ChipRow({ label, allLabel, options, selectedId, onSelect }: ChipRowProps) {
+  return (
+    <div role="group" aria-label={label} className="flex flex-wrap gap-2">
+      <button
+        type="button"
+        aria-pressed={selectedId === null}
+        onClick={() => onSelect(null)}
+        className={chipClass(selectedId === null)}
+      >
+        {allLabel}
+      </button>
+      {options.map((option) => (
+        <button
+          key={option.id}
+          type="button"
+          aria-pressed={selectedId === option.id}
+          onClick={() => onSelect(option.id)}
+          className={chipClass(selectedId === option.id)}
+        >
+          {option.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+/** Only rendered with two or more cards; `selectedId` null means every card. */
+export function CreditCardChips({
+  cards,
+  selectedId,
+  onSelect,
+}: {
+  cards: CardChipOption[];
+  selectedId: string | null;
+  onSelect: (id: string | null) => void;
+}) {
+  return (
+    <ChipRow
+      label={cardsCopy.label}
+      allLabel={cardsCopy.all}
+      options={cards.map((card) => ({ id: card.id, label: cardLabel(card) }))}
+      selectedId={selectedId}
+      onSelect={onSelect}
+    />
+  );
+}
+
+/** Only rendered with two or more people; `selectedId` null means everyone. */
+export function CreditPersonChips({
+  people,
+  selectedId,
+  onSelect,
+}: {
+  people: { id: string; displayName: string }[];
+  selectedId: string | null;
+  onSelect: (id: string | null) => void;
+}) {
+  return (
+    <ChipRow
+      label={he.credit.filters.people}
+      allLabel={he.credit.filters.allPeople}
+      options={people.map((person) => ({ id: person.id, label: person.displayName }))}
+      selectedId={selectedId}
+      onSelect={onSelect}
+    />
+  );
+}

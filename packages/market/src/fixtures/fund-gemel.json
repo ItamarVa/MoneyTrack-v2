@@ -1,0 +1,20 @@
+{
+  "success": true,
+  "result": {
+    "total": 2,
+    "records": [
+      {
+        "FUND_ID": 101,
+        "REPORT_PERIOD": 202406,
+        "AVG_ANNUAL_YIELD_TRAILING_3YRS": 4.0,
+        "AVG_ANNUAL_MANAGEMENT_FEE": 0.6
+      },
+      {
+        "FUND_ID": 202,
+        "REPORT_PERIOD": 202407,
+        "AVG_ANNUAL_YIELD_TRAILING_3YRS": 5.2,
+        "AVG_ANNUAL_MANAGEMENT_FEE": 0.8
+      }
+    ]
+  }
+}

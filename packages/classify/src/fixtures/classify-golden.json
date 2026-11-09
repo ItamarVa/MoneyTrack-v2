@@ -1,0 +1,142 @@
+{
+  "rules": [
+    {
+      "pattern": "וולט",
+      "categoryName": "מסעדות",
+      "priority": 10
+    },
+    {
+      "pattern": "שופרסל",
+      "categoryName": "מזון",
+      "priority": 20
+    }
+  ],
+  "cases": [
+    {
+      "description": "WOLT DELIVERY תל אביב",
+      "expectedCategory": "מסעדות",
+      "expectedSource": "rule"
+    },
+    {
+      "description": "שופרסל דיל חיפה",
+      "expectedCategory": "מזון",
+      "expectedSource": "rule"
+    },
+    {
+      "description": "חנות לא מוכרת 9999",
+      "expectedCategory": "לא מסווג",
+      "expectedSource": "default"
+    }
+  ],
+  "kindCases": [
+    {
+      "family": "card settlement on a bank account",
+      "description": "ישראכרט חיוב",
+      "accountKind": "bank",
+      "direction": "debit",
+      "kind": "card_settlement",
+      "expectedCategory": "חיובי כרטיס אשראי ללא פירוט",
+      "expectedSource": "kind"
+    },
+    {
+      "family": "fund buy",
+      "description": "קניית ני\"ע קרן כספית לדוגמה",
+      "accountKind": "bank",
+      "direction": "debit",
+      "kind": "transfer",
+      "expectedCategory": "חיסכון",
+      "expectedSource": "kind"
+    },
+    {
+      "family": "fund sell",
+      "description": "מכירת ני\"ע קרן כספית לדוגמה",
+      "accountKind": "bank",
+      "direction": "credit",
+      "kind": "transfer",
+      "expectedCategory": "חיסכון",
+      "expectedSource": "kind"
+    },
+    {
+      "family": "securities tax",
+      "descriptionParts": ["ניכוי", "מס ני\"ע לדוגמה"],
+      "accountKind": "bank",
+      "direction": "debit",
+      "kind": "expense",
+      "expectedCategory": "מיסים ועמלות",
+      "expectedSource": "kind"
+    },
+    {
+      "family": "mortgage",
+      "description": "לדוגמה-משכנ חיוב",
+      "accountKind": "bank",
+      "direction": "debit",
+      "kind": "loan_payment",
+      "expectedCategory": "החזרי הלוואות ומשכנתא",
+      "expectedSource": "kind"
+    },
+    {
+      "family": "insurer debit",
+      "description": "ביטוח לדוגמה הוראת קבע",
+      "accountKind": "bank",
+      "direction": "debit",
+      "kind": "expense",
+      "expectedCategory": "ביטוח",
+      "expectedSource": "kind"
+    },
+    {
+      "family": "salary",
+      "description": "דוגמה טק משכורת",
+      "accountKind": "bank",
+      "direction": "credit",
+      "kind": "income",
+      "expectedCategory": "הכנסות",
+      "expectedSource": "kind"
+    },
+    {
+      "family": "internal transfer",
+      "description": "העברה לחשבון לדוגמה",
+      "accountKind": "bank",
+      "direction": "debit",
+      "kind": "expense",
+      "exclusionReason": "internal_transfer",
+      "expectedCategory": "העברות פנימיות",
+      "expectedSource": "kind"
+    },
+    {
+      "family": "P2P transfer stays unclassified",
+      "description": "העברה בביט לדוגמה",
+      "accountKind": "bank",
+      "direction": "debit",
+      "kind": "expense",
+      "expectedCategory": "לא מסווג",
+      "expectedSource": "default"
+    },
+    {
+      "family": "negative: grocery line",
+      "description": "מכולת לדוגמה",
+      "accountKind": "bank",
+      "direction": "debit",
+      "kind": "expense",
+      "expectedCategory": "לא מסווג",
+      "expectedSource": "default"
+    },
+    {
+      "family": "negative: card purchase with an insurance word",
+      "description": "ביטוח לדוגמה",
+      "accountKind": "credit_card",
+      "direction": "debit",
+      "kind": "expense",
+      "expectedCategory": "לא מסווג",
+      "expectedSource": "default"
+    },
+    {
+      "family": "negative: refund is not income",
+      "description": "זיכוי לדוגמה",
+      "accountKind": "bank",
+      "direction": "credit",
+      "kind": "refund",
+      "expectedCategory": "לא מסווג",
+      "expectedSource": "default"
+    }
+  ]
+}

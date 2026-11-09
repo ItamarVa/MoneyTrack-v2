@@ -1,0 +1,13 @@
+{
+  "chart": {
+    "result": [
+      {
+        "meta": {
+          "currency": "ILA",
+          "regularMarketPrice": 24567
+        },
+        "timestamp": [1754006400]
+      }
+    ]
+  }
+}

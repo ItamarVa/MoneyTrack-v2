@@ -1,0 +1,7 @@
+build_from:
+  amd64: ghcr.io/home-assistant/base-debian:bookworm
+labels:
+  org.opencontainers.image.title: MoneyTrack Home Assistant add-on
+  org.opencontainers.image.source: https://github.com/ItamarVa/MoneyTrack-v2
+args:
+  BUILD_NODE: node:24-bookworm-slim

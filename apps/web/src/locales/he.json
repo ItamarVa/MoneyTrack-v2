@@ -1,0 +1,1033 @@
+{
+  "budgetsUx": {
+    "selectCategory": "בחרו קטגוריה",
+    "manageLink": "ניהול תקציבים",
+    "suggestions": {
+      "title": "הצעה לפי 3 החודשים האחרונים",
+      "hint": "ממוצע ההוצאה החודשית בכל קטגוריה, מעוגל כלפי מעלה ל-50 ₪. אפשר לשנות סכומים ולהסיר סימון.",
+      "average": "ממוצע {amount}",
+      "amountLabel": "סכום חודשי ל{category}",
+      "include": "הכללת {category}",
+      "activate": "הפעלת התקציבים",
+      "activating": "מפעיל…",
+      "activated": "{count} תקציבים הופעלו",
+      "partial": "{done} תקציבים הופעלו, {failed} נכשלו",
+      "loadError": "לא הצלחנו לטעון הצעות תקציב"
+    },
+    "progress": {
+      "over": "חריגה של {amount}",
+      "ariaBar": "{category}: {pct}% מהתקציב"
+    },
+    "summary": {
+      "title": "תקציבים ל{month}",
+      "empty": "עוד לא הוגדרו תקציבים לחודש זה",
+      "loadError": "לא הצלחנו לטעון תקציבים"
+    }
+  },
+  "networthUx": {
+    "partialNotice": "התמונה חלקית: לא הוזנו משכנתא/הלוואות או חסכונות, ולכן השווי הנקי לא משקף את כל הנכסים וההתחייבויות",
+    "toLoans": "להלוואות",
+    "toAccounts": "לחשבונות",
+    "cardDebtRow": "חיוב כרטיס אשראי קרוב",
+    "detected": {
+      "title": "זיהינו תשלומי משכנתא/הלוואה חודשיים של כ-{amount} ({merchant})",
+      "hint": "הוסיפו אותה כדי שהיתרה שנשארה לשלם תיכלל בשווי הנקי.",
+      "add": "הוספת המשכנתא"
+    }
+  },
+  "homeUx": {
+    "summary": {
+      "spentSoFar": "הוצאתם עד כה {amount} החודש",
+      "spentInMonth": "הוצאתם {amount} בחודש {month}",
+      "above": "{pct}% מעל חודש רגיל",
+      "below": "{pct}% מתחת לחודש רגיל",
+      "same": "כמו חודש רגיל",
+      "usualNote": "חודש רגיל הוא החציון (הערך האמצעי) של ההוצאות ב-{months} החודשים הקודמים.",
+      "usualNoteSoFar": "ההשוואה היא לאותו יום בחודש בחודשים הקודמים. חודש רגיל הוא החציון (הערך האמצעי) של {months} החודשים הקודמים.",
+      "allAverage": "ממוצע חודשי {amount} ב-{months} חודשים",
+      "allAverageOne": "ממוצע חודשי {amount} בחודש אחד",
+      "topCategories": "הקטגוריות הגדולות",
+      "nextCharge": "החיוב הבא בכרטיס: {amount} ב-{date}"
+    },
+    "emptyMonth": {
+      "goToLatest": "לחודש האחרון עם נתונים"
+    },
+    "recent": {
+      "title": "רכישות אחרונות",
+      "empty": "אין רכישות בתקופה הזו",
+      "all": "כל העסקאות"
+    },
+    "netWorthPartial": "תמונה חלקית",
+    "budgets": {
+      "setUp": "הגדרת תקציב חודשי"
+    },
+    "forecast": {
+      "explain": "צפי יציאות מהחשבון ב-30 הימים הקרובים"
+    }
+  },
+  "nav": {
+    "bottomLabel": "ניווט תחתון",
+    "sidebarLabel": "ניווט ראשי",
+    "moreLabel": "עוד",
+    "moreTitle": "עוד",
+    "moreListLabel": "מסכים נוספים",
+    "attentionCount": "לטיפול, {count} פריטים",
+    "attentionCountOne": "לטיפול, פריט אחד",
+    "items": {
+      "dashboard": { "label": "לוח בקרה", "shortLabel": "לוח" },
+      "credit": { "label": "אשראי", "description": "הוצאות הכרטיסים והחיוב הבא" },
+      "bank": { "label": "בנק", "description": "כל התנועות בחשבון הבנק" },
+      "transactions": { "label": "עסקאות", "description": "כל התנועות, עם חיפוש וסינון" },
+      "attention": { "label": "לטיפול" },
+      "alerts": { "label": "התראות", "description": "כל ההתראות על חיובים ושינויים" },
+      "analysis": { "label": "ניתוח", "description": "לאן הכסף הולך, לפי קטגוריות וחודשים" },
+      "accounts": { "label": "חשבונות", "description": "יתרות ותנועה לפי חשבון" },
+      "classify": { "label": "סיווג", "description": "שיוך עסקאות לקטגוריות" },
+      "loans": { "label": "הלוואות", "description": "יתרות, תשלומים ומה נשאר לשלם" },
+      "networth": { "label": "שווי נקי", "description": "כמה יש לך בסך הכל, ואיך זה משתנה" },
+      "settings": { "label": "הגדרות", "description": "מראה, אבטחה ונתונים" }
+    }
+  },
+  "allPeriod": {
+    "label": "כל התקופה",
+    "sinceMonth": "סיכום מאז {month}",
+    "sinceFallback": "סיכום של כל הנתונים"
+  },
+  "donutSelect": {
+    "drill": "לפירוט",
+    "showTransactions": "הצג עסקאות",
+    "clear": "סגירת הפרטים",
+    "hint": "הקישו על פרוסה או שורה כדי לראות פרטים",
+    "readoutLabel": "פרטי הפרוסה שנבחרה",
+    "ofExpenses": "מההוצאות",
+    "ofIncome": "מההכנסות",
+    "ofTotal": "מהסך"
+  },
+  "dashboardUx": {
+    "emptyMonth": {
+      "title": "אין עדיין עסקאות לחודש הזה",
+      "hint": "רכישות בכרטיס אשראי מופיעות בדשבורד אחרי הסנכרון הבא."
+    },
+    "partialMonth": "עד כה — החודש עוד לא הסתיים",
+    "yoy": {
+      "same": "סך ההוצאות ב-{months} החודשים דומה לשנה שעברה",
+      "up": "סך ההוצאות ב-{months} החודשים גבוה ב-{pct}% מאשתקד",
+      "down": "סך ההוצאות ב-{months} החודשים נמוך ב-{pct}% מאשתקד"
+    }
+  },
+  "categoryMerge": {
+    "duplicateName": "כבר קיימת קטגוריה בשם הזה תחת אותה קטגוריית אב",
+    "duplicateBadge": "שם כפול",
+    "duplicateBadgeTitle": "קיימת עוד קטגוריה באותו שם בעץ",
+    "mergeAction": "מיזוג לקטגוריה אחרת",
+    "dialogTitle": "מיזוג קטגוריה",
+    "dialogIntro": "כל העסקאות, הכללים, התקציבים והתת-קטגוריות של \"{name}\" יועברו לקטגוריה שתבחרו, והקטגוריה \"{name}\" תימחק.",
+    "targetLabel": "קטגוריית יעד",
+    "targetPlaceholder": "בחרו קטגוריה",
+    "confirmBody": "{count} עסקאות יועברו אל \"{target}\". הפעולה אינה הפיכה.",
+    "confirmBodyNone": "אין עסקאות להעברה. הכללים, התקציבים והתת-קטגוריות יועברו אל \"{target}\". הפעולה אינה הפיכה.",
+    "counting": "סופר עסקאות…",
+    "next": "המשך",
+    "back": "חזרה",
+    "confirmButton": "מיזוג",
+    "merging": "ממזג…",
+    "cancel": "ביטול",
+    "success": "הקטגוריות מוזגו",
+    "failed": "המיזוג נכשל",
+    "countFailed": "ספירת העסקאות נכשלה",
+    "errors": {
+      "sameCategory": "אי אפשר למזג קטגוריה לעצמה",
+      "descendant": "אי אפשר למזג קטגוריה לתת-קטגוריה שלה",
+      "systemSource": "קטגוריית מערכת אי אפשר למזג לקטגוריה אחרת",
+      "sourceNotFound": "קטגוריית המקור לא נמצאה",
+      "targetNotFound": "קטגוריית היעד לא נמצאה"
+    }
+  },
+  "personMerge": {
+    "mergeAction": "מיזוג לתוך…",
+    "mergeActionLabel": "מיזוג {name} לתוך בן משפחה אחר",
+    "dialogTitle": "מיזוג בן משפחה",
+    "dialogIntro": "כל מה שמשויך ל\"{name}\" – כניסות משתמש, חשבונות, כרטיסים ומשכורות – יועבר לבן המשפחה שתבחרו, ו\"{name}\" יימחק.",
+    "targetLabel": "למזג לתוך",
+    "targetPlaceholder": "בחרו בן משפחה",
+    "warning": "הפעולה אינה הפיכה: אחרי המיזוג אי אפשר להפריד חזרה.",
+    "confirmButton": "מיזוג סופי",
+    "merging": "ממזג…",
+    "cancel": "ביטול",
+    "success": "בני המשפחה מוזגו",
+    "failed": "המיזוג נכשל",
+    "noTargets": "אין בן משפחה אחר למזג אליו",
+    "errors": {
+      "samePerson": "אי אפשר למזג בן משפחה לתוך עצמו",
+      "sourceNotFound": "בן המשפחה למיזוג לא נמצא",
+      "targetNotFound": "בן משפחת היעד לא נמצא",
+      "invalidBody": "בקשה לא תקינה"
+    }
+  },
+  "transactionsUx": {
+    "header": {
+      "count": "עסקאות",
+      "expenses": "הוצאות",
+      "income": "הכנסות",
+      "addTransaction": "הוסף עסקה"
+    },
+    "kinds": {
+      "expense": "הוצאה",
+      "income": "הכנסה",
+      "transfer": "העברה",
+      "card_settlement": "סגירה",
+      "refund": "זיכוי",
+      "loan_payment": "הלוואה"
+    },
+    "day": {
+      "expenses": "הוצאות",
+      "income": "הכנסות",
+      "excludedBadge": "מוחרג"
+    },
+    "filters": {
+      "button": "חיפוש ומסננים",
+      "sheetTitle": "חיפוש ומסננים",
+      "search": "חיפוש",
+      "searchPlaceholder": "חיפוש בתיאור או בהערה…",
+      "category": "קטגוריה",
+      "addCategory": "הוספת קטגוריה",
+      "categoryChooserTitle": "בחירת קטגוריה לסינון",
+      "removeCategory": "הסרת הקטגוריה {name}",
+      "source": "חשבון או כרטיס",
+      "kind": "סוג עסקה",
+      "amount": "סכום",
+      "amountMin": "מינימום",
+      "amountMax": "מקסימום",
+      "sort": "מיון",
+      "sortDateDesc": "תאריך: החדשות קודם",
+      "sortDateAsc": "תאריך: הישנות קודם",
+      "sortAmountDesc": "סכום: הגדול קודם",
+      "sortAmountAsc": "סכום: הקטן קודם",
+      "sortOther": "מיון אחר (מכותרת הטבלה)",
+      "apply": "הצג תוצאות",
+      "clearAll": "נקה הכל",
+      "activeFilters": "מסננים פעילים"
+    },
+    "drawer": {
+      "linksTitle": "קשר לעסקה אחרת",
+      "linksEmpty": "העסקה לא קושרה לעסקה אחרת",
+      "linkPickLabel": "בחירת עסקה לקישור",
+      "linkPickHelper": "הדביקו כאן את המזהה של העסקה השנייה.",
+      "excludeLabel": "לא לכלול בסיכומים (למשל העברה בין חשבונות שלי)"
+    }
+  },
+  "categoryChooser": {
+    "title": "בחירת קטגוריה",
+    "placeholder": "בחירת קטגוריה",
+    "searchLabel": "חיפוש קטגוריה",
+    "searchPlaceholder": "הקלידו שם קטגוריה",
+    "close": "סגירה",
+    "noResults": "לא נמצאה קטגוריה בשם הזה",
+    "resultsCount": "{count} קטגוריות",
+    "currentMark": "נבחרה",
+    "changeAria": "שינוי קטגוריה, כרגע: {current}",
+    "manualBadge": "ידני",
+    "autoBadge": "אוטומטי",
+    "backToAutomatic": "חזרה לסיווג אוטומטי",
+    "backToAutomaticHint": "מבטל את הבחירה הידנית, והמערכת תסווג את העסקה שוב לפי הכללים",
+    "uncategorizedOption": "לא מסווג",
+    "saving": "שומר…",
+    "saveFailed": "שמירת הקטגוריה נכשלה",
+    "resetFailed": "החזרה לסיווג אוטומטי נכשלה",
+    "ruleOfferTitle": "החלה על עסקאות דומות",
+    "ruleOfferQuestion": "להחיל את \"{category}\" על כל {count} העסקאות של {merchant}, וגם על עסקאות עתידיות?",
+    "ruleApply": "כן, להחיל על כולן",
+    "ruleApplying": "יוצר כלל…",
+    "ruleDismiss": "לא, רק העסקה הזו",
+    "ruleDone": "הכלל נוצר. שאר העסקאות מתעדכנות ברקע.",
+    "ruleFailed": "יצירת הכלל נכשלה"
+  },
+  "haPassphrase": {
+    "label": "סיסמה ראשית",
+    "newLabel": "סיסמה ראשית חדשה",
+    "enrollHelper": "תשמש לפתיחת הנתונים המוצפנים שלך.",
+    "unlockHelper": "זו הסיסמה שהגדרת ברישום הראשוני לפלטפורמה.",
+    "recoveryKeyAck": "הבנתי שבשלב הבא יוצג מפתח שחזור פעם אחת בלבד, ושאני צריך לשמור אותו במקום בטוח. בלעדיו, אם אשכח את הסיסמה, לא אוכל להיכנס לנתונים.",
+    "pinLocked": "נעול — השתמשו בסיסמה הראשית",
+    "checklistTitle": "הסיסמה הראשית צריכה לכלול:",
+    "requirement": {
+      "length": "לפחות {min} תווים",
+      "lower": "אות קטנה באנגלית (a-z)",
+      "upper": "אות גדולה באנגלית (A-Z)",
+      "digit": "ספרה (0-9)",
+      "special": "תו מיוחד, למשל ! @ # או רווח"
+    },
+    "met": "קיים",
+    "unmet": "חסר",
+    "errors": {
+      "passphrase_too_short": "הסיסמה הראשית קצרה מדי. נדרשים לפחות {min} תווים.",
+      "passphrase_too_long": "הסיסמה הראשית ארוכה מדי. מותרים עד {max} תווים.",
+      "passphrase_missing_classes": "הסיסמה הראשית חייבת לכלול אות קטנה ואות גדולה באנגלית, ספרה ותו מיוחד.",
+      "too_common": "הסיסמה הראשית נפוצה מדי וקלה לניחוש, גם עם ספרות או סימנים בהתחלה או בסוף. בחרו סיסמה אחרת.",
+      "too_similar": "הסיסמה הראשית לא יכולה לכלול את שם המשתמש שלכם או את שם האפליקציה."
+    },
+    "unlockErrors": {
+      "auth_failed": "הסיסמה הראשית שגויה.",
+      "passphrase_locked": "יותר מדי ניסיונות שגויים של הסיסמה הראשית. נסו שוב בעוד כמה דקות."
+    },
+    "household": {
+      "description": "איפוס PIN והסיסמה הראשית של בן/בת הזוג. המשתמש יירשם מחדש דרך חשבון Home Assistant שלו.",
+      "confirmReset": "לאפס את הגישה של {username}? יידרשו הרשמה מחדש עם סיסמה ראשית ו-PIN."
+    }
+  },
+  "haPin": {
+    "sessionNotSaved": "הקוד נכון, אבל הטלפון לא שמר את הכניסה. עדכנו את התוסף לגרסה האחרונה ונסו שוב."
+  },
+  "haImport": {
+    "title": "ייבוא נתונים מהמחשב (Windows)",
+    "description": "הייבוא מעביר את כל הנתונים מהמחשב: תנועות, קטגוריות, כללי מיפוי, תקציבים, כרטיסים והגדרות. סיסמאות הבנקים לא עוברות — מזינים אותן מחדש במסך החשבונות. במחשב, לחצו פעמיים על Export-For-HomeAssistant.bat כדי ליצור את הקובץ ואת הקוד.",
+    "fileLabel": "קובץ הייצוא",
+    "fileHelper": "הקובץ moneytrack-import.db מהתיקייה moneytrack-import שבמחשב.",
+    "fileOnShare": "נמצא קובץ ייצוא בתיקיית השיתוף. אפשר לייבא אותו בלי לבחור קובץ.",
+    "codeLabel": "קוד הייצוא",
+    "codeHelper": "הקוד שהוצג בחלון הייצוא במחשב.",
+    "submit": "ייבוא",
+    "importing": "מייבא…",
+    "confirmTitle": "ייבוא נתונים מהמחשב",
+    "confirmMessage": "כל הנתונים שכבר נמצאים כאן יוחלפו בנתונים מהמחשב. המשתמשים, הסיסמה הראשית וה-PIN נשארים. להמשיך?",
+    "success": "הייבוא הושלם",
+    "errors": {
+      "import_failed": "הייבוא נכשל. בדקו שהקוד הועתק במדויק.",
+      "import_file_missing": "בחרו את קובץ הייצוא.",
+      "invalid_file": "הקובץ ריק או גדול מדי. בחרו את moneytrack-import.db.",
+      "db_locked": "הכספת נעולה. פתחו אותה עם הסיסמה הראשית ונסו שוב.",
+      "network": "שגיאת רשת. נסו שוב."
+    }
+  },
+  "sync": {
+    "lastSuccess": "סנכרון מוצלח אחרון: {date}",
+    "neverSynced": "טרם בוצע סנכרון מוצלח",
+    "credentialsMissing": "יש להזין פרטי התחברות כדי לסנכרן",
+    "errors": {
+      "CREDENTIALS_MISSING": "לא הוזנו פרטי התחברות. הזינו אותם ואז נסו לסנכרן שוב."
+    },
+    "banner": {
+      "title": "הנתונים אינם מעודכנים",
+      "stale": "לא בוצע סנכרון מוצלח מאז {date}.",
+      "never": "עדיין לא בוצע סנכרון מוצלח.",
+      "partial": "חלק מהחיבורים לא מסונכרנים: חסרים פרטי התחברות או שטרם בוצע סנכרון.",
+      "action": "למסך החשבונות",
+      "dismiss": "הסתרת ההודעה",
+      "statementNotice": "אין סנכרון אוטומטי עם ישראכרט. לנתונים עדכניים, העלו קובץ מאתר ישראכרט.",
+      "statementHow": "איך?"
+    }
+  },
+  "accountsUx": {
+    "needsAction": {
+      "title": "דורש פעולה",
+      "credentialsMissing": "{provider}: צריך להזין פרטי התחברות כדי לסנכרן.",
+      "neverSynced": "{provider}: עדיין לא סונכרן.",
+      "enterCredentials": "הזנת פרטי התחברות",
+      "sync": "סנכרון"
+    },
+    "connections": {
+      "title": "חיבורים לבנק ולאשראי",
+      "add": "+ חיבור בנק או אשראי"
+    },
+    "status": {
+      "syncing": "מסנכרן…",
+      "disabled": "מושבת",
+      "credentialsMissing": "חסרים פרטי התחברות",
+      "failed": "הסנכרון האחרון נכשל",
+      "never": "טרם סונכרן",
+      "lastSuccess": "סונכרן לאחרונה: {date}"
+    },
+    "menu": {
+      "open": "אפשרויות לחשבון {name}",
+      "activity": "תנועות החשבון",
+      "markBusiness": "סמן כחשבון עסקי",
+      "markHousehold": "החזר לחשבונות משק הבית"
+    },
+    "manual": {
+      "add": "הוספת חשבון ידני",
+      "close": "סגירה",
+      "quickAddTitle": "הוספה מהירה"
+    },
+    "statementUpload": {
+      "button": "העלאת קובץ",
+      "uploading": "מעלה…",
+      "ariaLabel": "העלאת קובץ עסקאות (xlsx) עבור {provider}",
+      "helper": "הסנכרון האוטומטי נחסם. אפשר להוריד את קובץ העסקאות (xlsx) מאתר חברת האשראי ולהעלות אותו כאן.",
+      "success": "נקלטו {count} עסקאות",
+      "errorType": "יש לבחור קובץ בפורמט xlsx בלבד",
+      "errorSize": "הקובץ גדול מדי (עד 2MB)",
+      "errorGeneric": "העלאת הקובץ נכשלה",
+      "progress": "מעלה {current} מתוך {total}…",
+      "errorInvalidFiles": "לא הועלה דבר. קבצים לא תקינים: {files}",
+      "partialSuccess": "נקלטו {count} עסקאות. נכשלו: {failures}",
+      "allFailed": "העלאת הקבצים נכשלה: {failures}",
+      "helpTitle": "איך מורידים קובץ מישראכרט",
+      "helpSteps": [
+        "נכנסים לאתר ישראכרט digital.isracard.co.il (מהאתר, גם בדפדפן בטלפון) ומתחברים.",
+        "פירוט עסקאות ← בוחרים חודש.",
+        "לוחצים על ייצוא לאקסל ושומרים.",
+        "כאן לוחצים \"העלאת קובץ\" ובוחרים קובץ אחד או כמה."
+      ],
+      "helpNote": "חודש שהועלה שוב מחליף את הקובץ הקודם של אותו חודש. חודשים שהגיעו מסנכרון לא משתנים."
+    }
+  },
+  "autoSync": {
+    "running":"מעדכן נתונים מהבנק…",
+    "runningProvider": "מעדכן נתונים מ{provider}…",
+    "updated": "הנתונים עודכנו",
+    "reloadNow": "רענון",
+    "otp": "{provider}: הבנק ביקש קוד אימות. היכנסו לחשבונות והזינו את הקוד.",
+    "credentialsMissing": "{provider}: יש להזין פרטי התחברות כדי לסנכרן. היכנסו לחשבונות ← פרטי התחברות.",
+    "failedTitle": "לא הצלחנו לעדכן את הנתונים",
+    "action": "למסך החשבונות",
+    "errors": {
+      "CREDENTIALS_MISSING": {
+        "what": "{provider}: לא הוזנו פרטי התחברות.",
+        "todo": "היכנסו לחשבונות ← פרטי התחברות והזינו אותם."
+      },
+      "INVALID_PASSWORD": {
+        "what": "{provider}: שם המשתמש או הסיסמה לא התקבלו בבנק.",
+        "todo": "היכנסו לחשבונות ← פרטי התחברות ועדכנו אותם. כדי שהחשבון לא ייחסם, לא ננסה שוב אוטומטית בקרוב."
+      },
+      "CHANGE_PASSWORD": {
+        "what": "{provider}: הבנק דורש להחליף סיסמה.",
+        "todo": "היכנסו לאתר או לאפליקציה של הבנק, החליפו סיסמה, ואז עדכנו אותה בחשבונות ← פרטי התחברות."
+      },
+      "ACCOUNT_BLOCKED": {
+        "what": "{provider}: הגישה לחשבון נחסמה על ידי הבנק.",
+        "todo": "פנו לבנק לביטול החסימה, ואז לחצו סנכרון בחשבונות."
+      },
+      "TWO_FACTOR_RETRIEVER_MISSING": {
+        "what": "{provider}: הבנק ביקש קוד אימות ולא התקבל קוד.",
+        "todo": "היכנסו לחשבונות, לחצו סנכרון והזינו את הקוד כשהוא מתבקש."
+      },
+      "TIMEOUT": {
+        "what": "{provider}: האתר של הבנק לא הגיב בזמן.",
+        "todo": "נסו שוב בעוד כמה דקות: חשבונות ← סנכרון."
+      },
+      "SCRAPE_EXCEPTION": {
+        "what": "{provider}: לא הצלחנו להתחבר לאתר הבנק. ייתכן שהאתר אינו זמין כרגע או שהשתנה.",
+        "todo": "נסו שוב מאוחר יותר: חשבונות ← סנכרון. אם זה חוזר, פנו לבעל המערכת."
+      },
+      "NOT_IMPLEMENTED": {
+        "what": "{provider}: סנכרון אוטומטי עדיין לא נתמך בחיבור הזה.",
+        "todo": "אפשר להוסיף עסקאות ידנית או מקובץ במסך החשבונות."
+      },
+      "GENERIC": {
+        "what": "{provider}: הסנכרון עם הבנק נכשל.",
+        "todo": "נסו שוב: חשבונות ← סנכרון. אם זה חוזר, בדקו שפרטי ההתחברות נכונים."
+      }
+    }
+  },
+  "connectionModal": {
+    "storedWindows": "הפרטים נשמרים בכספת המאובטחת של Windows על מחשב זה בלבד, ומשמשים רק להתחברות לאתר של הבנק כדי לשלוף את העסקאות.",
+    "storedHa": "הפרטים נשמרים מוצפנים בתוסף Home Assistant שלכם בלבד, ומשמשים רק להתחברות לאתר של הבנק כדי לשלוף את העסקאות."
+  },
+  "classify": {
+    "subtitle": "סיווג אוטומטי לפי קטגוריות חברות האשראי וכללים",
+    "providerMap": {
+      "loading": "טוען מיפוי קטגוריות חברות האשראי…",
+      "title": "מיפוי קטגוריות חברות האשראי",
+      "description": "כל שורה מקשרת קטגוריה של חברת האשראי לקטגוריה במערכת",
+      "categoryColumn": "קטגוריית חברת האשראי"
+    },
+    "merchants": {
+      "providerCategoriesPrefix": "קטגוריית חברת האשראי:",
+      "providerCategoriesColumn": "קטגוריית חברת האשראי"
+    }
+  },
+  "classifyFilter": {
+    "searchLabel": "חיפוש בית עסק",
+    "searchPlaceholder": "חיפוש לפי שם בית עסק",
+    "sortLabel": "מיון",
+    "sortAmount": "לפי סכום",
+    "sortCount": "לפי מספר עסקאות",
+    "sortName": "לפי שם",
+    "noMatches": "לא נמצאו בתי עסק תואמים",
+    "showing": "מציג {visible} מתוך {total}"
+  },
+  "cardSettlementLock": {
+    "label": "חיוב כרטיס אשראי",
+    "explanation": "חיוב כרטיס אשראי — הפירוט מופיע בדף האשראי",
+    "link": "לדף האשראי"
+  },
+  "bankPage": {
+    "title": "חשבון בנק",
+    "subtitle": "{account} · {period}",
+    "loading": "טוען נתוני בנק…",
+    "loadFailed": "טעינת נתוני הבנק נכשלה",
+    "retry": "נסו שוב",
+    "noAccountsTitle": "אין חשבון בנק מחובר",
+    "noAccountsDescription": "חברו חשבון בנק במסך החשבונות כדי לראות כאן את התנועות שלו.",
+    "accountPickerLabel": "חשבון בנק",
+    "summaryLabel": "סיכום התקופה",
+    "moneyIn": "נכנס",
+    "moneyOut": "יצא",
+    "net": "נטו",
+    "balance": "יתרה נוכחית",
+    "balanceAsOf": "נכון ל-{date}",
+    "balanceUnknown": "לא ידועה",
+    "listTitle": "תנועות",
+    "searchLabel": "חיפוש בתנועות",
+    "searchPlaceholder": "חיפוש לפי תיאור או הערה",
+    "empty": "אין תנועות בחשבון בתקופה הזו",
+    "noMatches": "לא נמצאו תנועות תואמות",
+    "showMore": "הצג עוד",
+    "listFailed": "טעינת התנועות נכשלה",
+    "loading": "טוען תנועות…"
+  },
+  "compactRow": {
+    "openAria": "פרטי עסקה: {description}",
+    "instalment": "{index}/{total}"
+  },
+  "creditPage": {
+    "title": "כרטיסי אשראי",
+    "subtitle": "רק הוצאות הכרטיסים, בלי חשבון הבנק · {period}",
+    "loading": "טוען נתוני כרטיסים…",
+    "loadFailed": "לא הצלחנו לטעון את נתוני הכרטיסים",
+    "retry": "נסו שוב",
+    "nextCharge": {
+      "title": "החיוב הבא",
+      "titleLast": "החיוב האחרון",
+      "onDate": "יורד מהחשבון ב-{date}",
+      "onDateLast": "ירד מהחשבון ב-{date}",
+      "mixedDates": "בתאריכים שונים, לפי כרטיס",
+      "today": "היום",
+      "tomorrow": "מחר",
+      "inDays": "בעוד {days} ימים",
+      "lastNote": "אין עדיין חיוב עתידי. זה החיוב האחרון שהיה.",
+      "none": "לכרטיס הזה עוד אין חיוב",
+      "count": "{count} עסקאות",
+      "countOne": "עסקה אחת",
+      "perCard": "לפי כרטיס",
+      "lastBadge": "אחרון"
+    },
+    "basis": {
+      "label": "איך לחלק לחודשים",
+      "purchase": "לפי חודש הרכישה",
+      "charge": "לפי החיוב בכרטיס",
+      "purchaseHint": "כל עסקה נספרת בחודש שבו קניתם.",
+      "chargeHint": "כל עסקה נספרת בחודש שבו הכרטיס חויב עליה."
+    },
+    "cards": {
+      "label": "בחירת כרטיס",
+      "all": "כל הכרטיסים"
+    },
+    "ring": {
+      "titleWithPeriod": "הוצאות לפי קטגוריה · {period}"
+    },
+    "monthly": {
+      "title": "הוצאות הכרטיס לפי חודש",
+      "ariaLabel": "גרף הוצאות חודשי בכרטיס",
+      "summary": "{month}: {total}",
+      "changeUp": "עלייה של {pct}% לעומת החודש הקודם",
+      "changeDown": "ירידה של {pct}% לעומת החודש הקודם",
+      "changeSame": "ללא שינוי לעומת החודש הקודם",
+      "other": "אחר",
+      "total": "סה״כ",
+      "monthColumn": "חודש",
+      "tapHint": "לחצו על עמודה כדי לעבור לחודש",
+      "dimensionAria": "חלוקת הגרף",
+      "showTable": "טבלת נתונים",
+      "hideTable": "הסתר טבלה",
+      "tableCaption": "הוצאות הכרטיס לפי חודש וקטגוריה",
+      "empty": "אין הוצאות בכרטיס בטווח החודשים שמוצג",
+      "prevMonths": "חודשים קודמים",
+      "nextMonths": "חודשים הבאים",
+      "loadFailed": "לא הצלחנו לטעון את הגרף החודשי"
+    },
+    "merchants": {
+      "title": "בתי העסק המובילים"
+    },
+    "reconciliation": {
+      "title": "התאמה לחיוב בבנק",
+      "hint": "משווים את הסכום שירד מחשבון הבנק לסכום העסקאות שיש לנו בכרטיס באותו חודש חיוב.",
+      "amounts": "חויב בבנק {billed} · בפירוט {detailed}",
+      "detailedOnly": "בפירוט {detailed}",
+      "match": "תואם",
+      "missing": "חסרים פרטים בסך {amount} — העלו את קובץ החודש",
+      "missingSync": "חסרים פרטים בסך {amount}. ייתכן שהסנכרון הבא ישלים אותם.",
+      "extra": "בפירוט יש {amount} יותר ממה שחויב בבנק",
+      "noBill": "לא מצאנו חיוב בבנק על החודש הזה",
+      "open": "החודש הזה עוד לא חויב בבנק",
+      "combined": "חיוב אחד בבנק לכמה כרטיסים, הסכומים הם של כולם יחד",
+      "uploadLink": "איך מעלים קובץ",
+      "noData": "אין עדיין נתונים להשוואה בחודש הזה",
+      "recentTitle": "חודשים קודמים שלא מתאימים",
+      "recentMissing": "חסרים {amount}",
+      "recentExtra": "עודף {amount}",
+      "recentNoBill": "אין חיוב בבנק",
+      "goToMonth": "מעבר לחודש {month}",
+      "loadFailed": "לא הצלחנו לבדוק את ההתאמה לבנק"
+    },
+    "transactions": {
+      "title": "עסקאות בכרטיס",
+      "showMore": "הצג עוד",
+      "allLink": "לכל העסקאות בכרטיס",
+      "installment": "תשלום {index} מתוך {total}",
+      "chargeOn": "חיוב: {date}"
+    },
+    "empty": {
+      "noCardsTitle": "עדיין אין כרטיס אשראי מחובר",
+      "noCardsHint": "חברו חברת אשראי במסך החשבונות, ואחרי הסנכרון תראו כאן את כל ההוצאות בכרטיס.",
+      "toAccounts": "למסך החשבונות",
+      "noMonthTitle": "אין עסקאות בכרטיס בחודש הזה",
+      "noMonthHint": "ייתכן שהסנכרון הבא עוד לא הביא אותן.",
+      "noDataHint": "עוד לא נטענו עסקאות של הכרטיסים.",
+      "prevMonth": "לחודש הקודם"
+    }
+  },
+  "alertsUx": {
+    "filterSeverity": "חומרה",
+    "filterType": "סוג",
+    "all": "הכל",
+    "dismiss": "סגירה",
+    "viewTransaction": "צפייה בעסקה"
+  },
+  "embeddedUx": {
+    "themeRow": "ערכת צבעים",
+    "themeLight": "בהיר",
+    "themeDark": "כהה",
+    "themeSystem": "מערכת",
+    "logout": "יציאה"
+  },
+  "attention": {
+    "title": "לטיפול",
+    "loadError": "לא הצלחנו לטעון. נסו שוב.",
+    "retry": "נסו שוב",
+    "allClear": {
+      "title": "הכל מסודר",
+      "description": "אין כרגע שום דבר שדורש את תשומת ליבך."
+    },
+    "sync": {
+      "title": "בעיות בחיבור",
+      "action": "לטיפול"
+    },
+    "classify": {
+      "title": "סיווג מהיר",
+      "progress": "{current} מתוך {total}",
+      "transactionOne": "עסקה אחת",
+      "transactions": "{count} עסקאות",
+      "total": "סה״כ {amount}",
+      "lastDate": "אחרונה: {date}",
+      "other": "קטגוריה אחרת",
+      "skip": "דלג",
+      "chooserTitle": "בחרו קטגוריה",
+      "saving": "שומר…",
+      "confirmed": "סווגו {count} של {merchant} לקטגוריה {category}",
+      "undo": "ביטול",
+      "undone": "הסיווג בוטל",
+      "saveError": "לא הצלחנו לשמור. נסו שוב.",
+      "noPattern": "אי אפשר ליצור כלל משם העסק הזה.",
+      "finished": "סיימתם את כל הרשימה"
+    },
+    "alerts": {
+      "title": "התראות פתוחות",
+      "view": "צפייה",
+      "dismiss": "סגירה",
+      "all": "לכל ההתראות",
+      "viewAria": "צפייה בהתראה: {title}",
+      "dismissAria": "סגירת ההתראה: {title}",
+      "dismissError": "לא הצלחנו לסגור את ההתראה."
+    }
+  },
+  "transactionDrawer": {
+    "title": "פרטי עסקה",
+    "close": "סגור",
+    "closeAria": "סגור פרטי עסקה",
+    "loading": "טוען…",
+    "notFound": "לא נמצאה עסקה",
+    "categoryTitle": "קטגוריה",
+    "categoryHelper": "לשינוי קטגוריה לחצו על הקטגוריה למטה. הבחירה נשמרת מיד.",
+    "categoryChanged": "הקטגוריה עודכנה",
+    "noteTitle": "הערה",
+    "notePlaceholder": "הערה אישית לעסקה",
+    "tagsTitle": "תגיות",
+    "tagsEmpty": "אין תגיות. צרו תגיות בהגדרות.",
+    "excludeLabel": "לא לספור בסיכומים",
+    "excludeHelper": "לדוגמה: העברה בין החשבונות שלכם, שאינה הוצאה.",
+    "saveChanges": "שמירת שינויים",
+    "saving": "שומר…",
+    "saved": "השינויים נשמרו",
+    "dirtyHint": "יש שינויים שלא נשמרו",
+    "splitDirtyHint": "פיצול לא נשמר (לחצו על שמירת פיצול בתוך הסעיף)",
+    "discardTitle": "לצאת בלי לשמור?",
+    "discardMessage": "יש שינויים שלא נשמרו. אם תצאו עכשיו הם יימחקו.",
+    "discardConfirm": "יציאה בלי לשמור",
+    "discardCancel": "חזרה לעריכה",
+    "splitTitle": "פיצול לקטגוריות",
+    "splitHelper": "חלוקת הסכום בין כמה קטגוריות, למשל קנייה בסופר שחלקה ביגוד. הפיצול נשמר בנפרד, בכפתור שמירת פיצול שבתוך הסעיף.",
+    "splitAddRow": "+ הוספת שורה",
+    "splitCategory": "קטגוריה",
+    "splitAmount": "סכום",
+    "splitNote": "הערה לפיצול",
+    "splitSave": "שמירת פיצול",
+    "splitSaved": "הפיצול נשמר",
+    "splitNeedOne": "נא להוסיף לפחות פיצול אחד",
+    "splitSingleRow": "לשינוי קטגוריה השתמשו בשדה קטגוריה למעלה. פיצול דורש לפחות שתי קטגוריות.",
+    "splitSavedTitle": "פיצולים שמורים",
+    "linkTitle": "קישור לעסקה קשורה",
+    "linkHelper": "קישור של זיכוי לקנייה המקורית, או של שני צדי העברה בין החשבונות שלכם, כדי שהכסף לא ייספר פעמיים.",
+    "linkExistingTitle": "קישורים קיימים",
+    "linkExistingNote": "אי אפשר להסיר קישור מכאן.",
+    "linkManual": "ידני",
+    "linkAuto": "אוטומטי",
+    "linkTypeLabel": "סוג הקישור",
+    "linkSuggestionsTitle": "עסקאות מתאימות",
+    "linkSuggestionsHelper": "עסקאות באותו סכום בטווח של 60 יום, ואחריהן תוצאות חיפוש.",
+    "linkSuggestionsLoading": "מחפש עסקאות מתאימות…",
+    "linkSuggestionsEmpty": "לא נמצאו עסקאות מתאימות. נסו חיפוש חופשי.",
+    "linkSearchLabel": "חיפוש עסקה לפי תיאור",
+    "linkSearchPlaceholder": "הקלידו חלק מהתיאור",
+    "linkPicked": "נבחרה לקישור:",
+    "linkClearPick": "ביטול בחירה",
+    "linkSubmit": "קישור העסקאות",
+    "linkCreated": "הקישור נוצר",
+    "linkOtherUnknown": "עסקה אחרת",
+    "linkTypes": {
+      "refund_of": {
+        "label": "זיכוי על קנייה",
+        "hint": "העסקה הזו היא זיכוי על העסקה שבחרתם (הקנייה המקורית)."
+      },
+      "internal_transfer": {
+        "label": "העברה בין החשבונות שלי",
+        "hint": "שני צדי אותה העברה: יציאה מחשבון אחד וכניסה לחשבון אחר."
+      },
+      "card_settlement": {
+        "label": "חיוב כרטיס אשראי",
+        "hint": "חיוב הבנק על כרטיס אשראי והקניות בכרטיס שמרכיבות אותו."
+      },
+      "duplicate_of": {
+        "label": "כפילות",
+        "hint": "אותה עסקה נקלטה פעמיים. העסקה הזו היא העותק."
+      }
+    }
+  },
+  "plainUx": {
+    "alerts": {
+      "unmatchedSettlement": "חיוב כרטיס שלא זוהה"
+    },
+    "cashflow": {
+      "forecastTitle": "תחזית תנועות כסף — 30 יום"
+    },
+    "transactionDrawer": {
+      "excludedBadge": "לא נכלל בסיכומים",
+      "exclusionReasonPlaceholder": "סיבה לכך שהעסקה לא נכללת בסיכומים (אופציונלי)",
+      "saveMeta": "שמור הערה, תגיות ולא לכלול בסיכומים"
+    },
+    "filters": {
+      "merchantChip": "בית עסק:"
+    },
+    "transactionTable": {
+      "excludedBadge": "לא נכלל"
+    },
+    "brands": {
+      "max": "מקס",
+      "discount": "דיסקונט",
+      "isracard": "ישראכרט",
+      "cal": "כאל",
+      "visaCal": "כאל",
+      "visacal": "כאל",
+      "leumi": "לאומי",
+      "hapoalim": "הפועלים",
+      "mizrahi": "מזרחי טפחות",
+      "amex": "אמריקן אקספרס",
+      "bit": "ביט",
+      "paybox": "פייבוקס",
+      "cash": "מזומן"
+    },
+    "settings": {
+      "advancedHint": "כלים למי שרוצה לדייק. בשימוש רגיל אין צורך בהם.",
+      "rules": {
+        "title": "כללים",
+        "description": "כללים שמסווגים עסקאות אוטומטית לפי שם בית העסק"
+      },
+      "providerMap": {
+        "title": "מיפוי קטגוריות חברות האשראי",
+        "description": "קובע לאיזו קטגוריה אצלנו מתאימה כל קטגוריה של חברת האשראי"
+      },
+      "export": {
+        "title": "ייצוא קובץ",
+        "description": "הורדת כל העסקאות לקובץ שאפשר לפתוח באקסל",
+        "button": "הורדת קובץ"
+      },
+      "reapply": {
+        "title": "סיווג מחדש של הכל",
+        "description": "מחשב מחדש את הקטגוריה של כל העסקאות לפי הכללים הנוכחיים",
+        "button": "סווג מחדש הכל",
+        "busy": "מפעיל…",
+        "started": "הסיווג מחדש התחיל — אפשר לעקוב אחרי ההתקדמות בראש הדף",
+        "failed": "הסיווג מחדש נכשל"
+      }
+    },
+    "classify": {
+      "title": "סיווג בתי עסק",
+      "quickLink": "סיווג מהיר"
+    },
+    "analysis": {
+      "displaySettings": "הגדרות תצוגה",
+      "dateBasis": "לפי תאריך",
+      "byPurchase": "תאריך הקנייה",
+      "byCharge": "תאריך החיוב בחשבון",
+      "moreActions": "עוד פעולות",
+      "exportFile": "ייצוא קובץ"
+    },
+    "merchants": {
+      "title": "בתי עסק בלי קטגוריה",
+      "loading": "טוען בתי עסק בלי קטגוריה…",
+      "loadFailed": "שגיאה בטעינת בתי עסק",
+      "emptyTitle": "אין בתי עסק בלי קטגוריה",
+      "emptyDescription": "כל בתי העסק מסווגים או שאין עסקאות בתקופה הנוכחית.",
+      "hint": "בחירת קטגוריה תחול גם על כל העסקאות העתידיות של בית העסק הזה",
+      "column": "בית עסק"
+    },
+    "networth": {
+      "explainer": "כמה יש לכם בסך הכל: חסכונות ויתרות פחות חובות"
+    },
+    "accountKinds": {
+      "bank": "חשבון בנק",
+      "checking": "עו״ש",
+      "savings": "חיסכון",
+      "investment": "השקעות",
+      "cash": "מזומן"
+    }
+  },
+  "otherMonthsNotice": {
+    "found": "נמצאו {count} תוצאות בחודשים אחרים",
+    "showAll": "הצג בכל התקופה"
+  },
+  "accounts": {
+    "title": "חשבונות",
+    "subtitle": "כל חשבון בנק, כרטיס וחשבון ידני במקום אחד",
+    "connectionsMoved": "ניהול חיבורים וסנכרון עבר להגדרות",
+    "connectionsLink": "להגדרות החיבורים",
+    "synced": "חשבונות מסונכרנים",
+    "manual": "חשבונות ידניים",
+    "business": "חשבונות עסקיים",
+    "businessHint": "לא נכללים בדשבורד, בניתוח ובתקציבים. הפעילות שלהם נצפית מכאן בלבד.",
+    "emptyManualTitle": "אין חשבונות ידניים",
+    "emptyManualDescription": "הוסיפו ביט, פייבוקס או מזומן דרך הוספת חשבון ידני כדי להזין עסקאות ידנית.",
+    "loadError": "שגיאה בטעינה",
+    "createError": "שגיאה ביצירת חשבון",
+    "updateError": "שגיאה בעדכון החשבון",
+    "saved": "החשבון עודכן",
+    "owner": "בעלים",
+    "noOwner": "ללא בעלים",
+    "balance": "יתרה",
+    "cardBalance": "יתרה לחיוב",
+    "notSynced": "טרם סונכרן",
+    "asOf": "נכון ל-{date}",
+    "monthIn": "נכנס",
+    "monthOut": "יצא",
+    "spent": "הוצאות",
+    "periodAll": "6 חודשים אחרונים",
+    "txCount": "{count} עסקאות",
+    "lastActivity": "פעילות אחרונה: {date}",
+    "noActivity": "אין פעילות בתקופה",
+    "summaryFailed": "לא ניתן לטעון פעילות",
+    "trendLabel": "הוצאות ב-6 החודשים האחרונים",
+    "toTransactions": "לעסקאות",
+    "toBank": "לדף הבנק",
+    "toCredit": "לדף האשראי",
+    "edit": "שינוי שם ובעלים",
+    "name": "שם החשבון",
+    "save": "שמירה",
+    "cancel": "ביטול"
+  },
+  "alerts": {
+    "alerts": {
+      "filterByType": "סינון לפי סוג",
+      "closeAllOfType": "סגור הכל מסוג זה",
+      "closeAllTitle": "סגירת התראות",
+      "closeAllMessage": "לסגור {count} התראות מסוג {type}?",
+      "closeAllDone": "{count} התראות נסגרו",
+      "closeAllFailed": "{count} התראות לא נסגרו",
+      "openBadgeLabel": "התראות, {count} פתוחות",
+      "openBadgeLabelOne": "התראות, אחת פתוחה"
+    },
+    "cardBills": {
+      "title": "חיובי כרטיסים שלא תואמים",
+      "amounts": "חויב בבנק {billed} · בפירוט {detailed}",
+      "uploadLink": "העלאת קובץ",
+      "monthLink": "לחודש",
+      "monthLinkAria": "מעבר לחודש {month}: {card}",
+      "allMatch": "חיובי הכרטיסים תואמים"
+    }
+  },
+  "cardBills": {
+    "debitsToggle": "פירוט החיובים בבנק",
+    "debitsEmpty": "אין חיובים בבנק לחודש הזה",
+    "extrasTitle": "חיובים נוספים מול חברת האשראי (לא נכללו)",
+    "extrasHint": "חיובים שלא שייכים לחשבון הכרטיס הזה, למשל כרטיס ישן, העברות או טעינות"
+  },
+  "classifyHub": {
+    "title": "סיווג",
+    "quickLink": "סיווג מהיר",
+    "tabs": {
+      "merchants": {
+        "label": "בתי עסק לא מסווגים",
+        "description": "בתי עסק שעדיין בלי קטגוריה. בחירת קטגוריה יוצרת כלל לעסקאות הבאות."
+      },
+      "rules": {
+        "label": "כללי סיווג",
+        "description": "כללים שמסווגים עסקאות אוטומטית לפי שם בית העסק."
+      },
+      "categories": {
+        "label": "קטגוריות",
+        "description": "ניהול קטגוריות ההוצאות וההכנסות."
+      },
+      "providerMap": {
+        "label": "מיפוי חברות אשראי",
+        "description": "קובע לאיזו קטגוריה אצלנו מתאימה כל קטגוריה של חברת האשראי."
+      }
+    },
+    "nav": {
+      "label": "סיווג",
+      "description": "בתי עסק, כללים וקטגוריות"
+    },
+    "loading": "טוען סיווג…"
+  },
+  "credit": {
+    "filters": {
+      "people": "סינון לפי אדם",
+      "allPeople": "כולם",
+      "clearMerchant": "הסרת הסינון לבית העסק {name}",
+      "merchantChip": "בית עסק: {name}",
+      "merchantHint": "לחצו על בית עסק כדי לסנן את העסקאות"
+    },
+    "search": {
+      "label": "חיפוש בעסקאות הכרטיס",
+      "placeholder": "חיפוש עסקה…",
+      "clear": "ניקוי החיפוש",
+      "empty": "לא נמצאו עסקאות שמתאימות לחיפוש",
+      "failed": "החיפוש נכשל, נסו שוב"
+    }
+  },
+  "drawer": {
+    "category": {
+      "label": "קטגוריה",
+      "change": "שינוי",
+      "choose": "בחירת קטגוריה",
+      "fieldAria": "קטגוריה: {current}. לחצו לשינוי",
+      "fieldAriaEmpty": "קטגוריה: לא נבחרה. לחצו לבחירת קטגוריה",
+      "uncategorizedHint": "העסקה עדיין לא סווגה. לחצו על השדה ובחרו קטגוריה.",
+      "autoSentence": "נקבע אוטומטית",
+      "manualSentence": "נבחר ידנית",
+      "backToAuto": "חזרה לאוטומטי"
+    },
+    "rule": {
+      "title": "גם לעסקאות הבאות מאותו בית עסק?",
+      "body": "להחיל את הקטגוריה הזו על כל העסקאות של «{merchant}» (גם בעתיד)",
+      "apply": "כן, להחיל על כולן",
+      "applyWithCount": "כן, להחיל על כולן ({count})",
+      "matchCount": "{count} עסקאות תואמות",
+      "checking": "בודקים כמה עסקאות תואמות…",
+      "noMatches": "לא נמצאו עסקאות תואמות",
+      "link": "להחיל על כל העסקאות של «{merchant}»",
+      "dismiss": "לא, רק העסקה הזו",
+      "advanced": "אפשרויות מתקדמות",
+      "patternLabel": "טקסט שמזהה את בית העסק",
+      "patternHint": "כל עסקה שהתיאור שלה מכיל את הטקסט הזה תסווג באותה קטגוריה",
+      "saving": "מחילים…"
+    }
+  },
+  "settingsRules": {
+    "title": "כללי סיווג",
+    "description": "חלק משם בית העסק, הקטגוריה ועדיפות — עם תצוגה מקדימה של ההתאמות",
+    "loading": "טוען כללים…",
+    "empty": "אין כללים",
+    "loadFailed": "הטעינה נכשלה",
+    "saveFailed": "השמירה נכשלה",
+    "updateFailed": "העדכון נכשל",
+    "deleteFailed": "המחיקה נכשלה",
+    "add": "כלל חדש",
+    "searchLabel": "חיפוש כללים",
+    "searchPlaceholder": "חיפוש לפי טקסט או קטגוריה",
+    "searchClear": "נקה חיפוש",
+    "showing": "מציג {shown} מתוך {total}",
+    "noResults": "אין כללים תואמים לחיפוש",
+    "colPattern": "טקסט",
+    "colCategory": "קטגוריה",
+    "colPriority": "עדיפות",
+    "colActions": "פעולות",
+    "priorityShort": "עדיפות {n}",
+    "disabledBadge": "מושבת",
+    "disable": "השבת",
+    "enable": "הפעל",
+    "edit": "עריכה",
+    "delete": "מחיקה",
+    "rowMenu": "פעולות לכלל {pattern}",
+    "dialogCreate": "כלל חדש",
+    "dialogEdit": "עריכת כלל",
+    "patternLabel": "חלק משם בית העסק",
+    "patternPlaceholder": "למשל shufersal",
+    "categoryLabel": "קטגוריה",
+    "priorityLabel": "עדיפות",
+    "previewPending": "בודק התאמות…",
+    "previewCount": "יתאים ל־{n} עסקאות",
+    "saving": "שומר…",
+    "saveUpdate": "עדכון כלל",
+    "saveCreate": "הוספת כלל",
+    "cancel": "ביטול",
+    "close": "סגירה",
+    "discardTitle": "לבטל שינויים?",
+    "discardMessage": "יש שינויים שלא נשמרו. לסגור בלי לשמור?",
+    "discardConfirm": "סגור בלי לשמור",
+    "discardKeep": "המשך עריכה",
+    "deleteTitle": "למחוק את הכלל?",
+    "deleteMessage": "הכלל {pattern} יימחק. אי אפשר לבטל.",
+    "deleteConfirm": "מחק"
+  },
+  "settingsShell": {
+    "title": "הגדרות",
+    "comingSoon": "יושלם בשלב הבא.",
+    "loadError": "שגיאה בטעינה",
+    "syncError": "שגיאה בסנכרון",
+    "groups": {
+      "household": "משק הבית",
+      "money": "כסף",
+      "connections": "חיבורים",
+      "look": "מראה",
+      "securityBackup": "אבטחה וגיבוי",
+      "more": "עוד"
+    },
+    "tabs": {
+      "people": {
+        "label": "בני משפחה",
+        "description": "מי גר בבית ומי מופיע בדוחות ובשיוך עסקאות."
+      },
+      "salaries": {
+        "label": "משכורות",
+        "description": "הכנסות קבועות של בני המשפחה לפי חודש."
+      },
+      "budgets": {
+        "label": "תקציבים",
+        "description": "מגבלות הוצאה לפי קטגוריה והתראות חריגה."
+      },
+      "cards": {
+        "label": "כרטיסים",
+        "description": "כרטיסי האשראי והשיוך שלהם לבני המשפחה."
+      },
+      "connections": {
+        "label": "חיבורים",
+        "description": "חיבורי בנק ואשראי, סנכרון והעלאת דפי חשבון."
+      },
+      "appearance": {
+        "label": "תצוגה",
+        "description": "ערכת נושא ומראה האפליקציה."
+      },
+      "security": {
+        "label": "אבטחה",
+        "description": "גישה, סיסמאות והגנה על הנתונים."
+      },
+      "backup": {
+        "label": "גיבוי",
+        "description": "ייבוא וגיבוי של הנתונים."
+      },
+      "advanced": {
+        "label": "מתקדם",
+        "description": "ייצוא נתונים וסיווג מחדש של כל העסקאות."
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "exchangeRates": [
+    {
+      "key": "USD",
+      "currentExchangeRate": 3.65,
+      "unit": 1,
+      "lastUpdate": "2026-08-24T12:00:00.000Z"
+    },
+    {
+      "key": "EUR",
+      "currentExchangeRate": 3.92,
+      "unit": 1,
+      "lastUpdate": "2026-08-24T12:00:00.000Z"
+    },
+    {
+      "key": "GBP",
+      "currentExchangeRate": 4.58,
+      "unit": 1,
+      "lastUpdate": "2026-08-24T12:00:00.000Z"
+    },
+    {
+      "key": "JPY",
+      "currentExchangeRate": 2.45,
+      "unit": 100,
+      "lastUpdate": "2026-08-24T12:00:00.000Z"
+    }
+  ]
+}
